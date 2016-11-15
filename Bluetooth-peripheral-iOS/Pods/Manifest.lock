@@ -1,0 +1,21 @@
+PODS:
+  - BluetoothKit (0.3.0)
+
+DEPENDENCIES:
+  - BluetoothKit (from `https://github.com/rhummelmose/BluetoothKit.git`)
+
+EXTERNAL SOURCES:
+  BluetoothKit:
+    :git: https://github.com/rhummelmose/BluetoothKit.git
+
+CHECKOUT OPTIONS:
+  BluetoothKit:
+    :commit: 7e1f092da526b421917c31425c6e87f33ed6145f
+    :git: https://github.com/rhummelmose/BluetoothKit.git
+
+SPEC CHECKSUMS:
+  BluetoothKit: 23c4e2ef6a0beeda7e50647b0eb3496f40d90ad2
+
+PODFILE CHECKSUM: d537f05bebdded02bd109671f9cccd3e2f6017ec
+
+COCOAPODS: 1.0.1

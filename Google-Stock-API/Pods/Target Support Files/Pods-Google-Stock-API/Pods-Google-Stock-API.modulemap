@@ -1,0 +1,6 @@
+framework module Pods_Google_Stock_API {
+  umbrella header "Pods-Google-Stock-API-umbrella.h"
+
+  export *
+  module * { export * }
+}

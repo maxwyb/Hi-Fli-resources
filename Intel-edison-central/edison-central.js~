@@ -1,0 +1,8 @@
+var noble = require('../..');
+
+noble.on('stateChange', function(state) {
+    if (state === 'poweredOn') {
+
+    }
+})
+

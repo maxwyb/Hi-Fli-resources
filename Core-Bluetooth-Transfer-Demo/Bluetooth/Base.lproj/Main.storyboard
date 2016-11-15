@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Central-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="BTLECentralViewController" customModule="Bluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9b-Yf-zgE">
+                                <rect key="frame" x="16" y="20" width="568" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s9b-Yf-zgE" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" constant="20" id="FE3-zs-dW4"/>
+                            <constraint firstAttribute="bottom" secondItem="s9b-Yf-zgE" secondAttribute="bottom" constant="57" id="MoZ-Xq-eLe"/>
+                            <constraint firstAttribute="trailing" secondItem="s9b-Yf-zgE" secondAttribute="trailing" constant="16" id="x6s-U1-LKb"/>
+                            <constraint firstItem="s9b-Yf-zgE" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="16" id="z9c-qU-JzW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Central" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="textView" destination="s9b-Yf-zgE" id="IF8-tH-qrk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Peripheral-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="BTLEPeripheralViewController" customModule="Bluetooth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertising:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYi-HH-vm2">
+                                <rect key="frame" x="16" y="33" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WbT-5u-laT">
+                                <rect key="frame" x="535" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="u1A-D3-wo8"/>
+                                </connections>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Here is a bunch of sample text.  Hold another device close to see the transfer happen." translatesAutoresizingMaskIntoConstraints="NO" id="j9B-X4-o8Q">
+                                <rect key="frame" x="16" y="67" width="568" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j9B-X4-o8Q" firstAttribute="top" secondItem="WbT-5u-laT" secondAttribute="bottom" constant="8" symbolic="YES" id="1YI-4C-eFp"/>
+                            <constraint firstItem="j9B-X4-o8Q" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="DNt-W7-5ff"/>
+                            <constraint firstItem="WbT-5u-laT" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="F2w-39-pge"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="j9B-X4-o8Q" secondAttribute="bottom" constant="8" symbolic="YES" id="IZm-3C-DNY"/>
+                            <constraint firstItem="WbT-5u-laT" firstAttribute="trailing" secondItem="j9B-X4-o8Q" secondAttribute="trailing" id="Jjn-wu-U9e"/>
+                            <constraint firstItem="WbT-5u-laT" firstAttribute="centerY" secondItem="uYi-HH-vm2" secondAttribute="centerY" id="g4Z-8B-Cyf"/>
+                            <constraint firstItem="j9B-X4-o8Q" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="iLO-hf-TFd"/>
+                            <constraint firstItem="j9B-X4-o8Q" firstAttribute="leading" secondItem="uYi-HH-vm2" secondAttribute="leading" id="qYJ-sr-IrA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Peripheral" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="advertisingSwitch" destination="WbT-5u-laT" id="OTN-CF-AFz"/>
+                        <outlet property="textView" destination="j9B-X4-o8Q" id="Dym-sJ-C5l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
